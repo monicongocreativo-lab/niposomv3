@@ -1,0 +1,24 @@
+/* Compact purchase action across cards, lists and detail pages. */
+.header-v3 .product-purchase .product-add {
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 44px;
+  min-height: 28px;
+  height: 28px;
+  padding: 4px 10px;
+  font-size: 11px;
+  line-height: 1;
+}
+.header-v3 .product-detail .product-purchase .product-add {
+  min-width: 64px;
+  height: 44px;
+  padding-inline: 16px;
+  font-size: 13px;
+}
+.header-v3 .feed-buy .product-purchase .product-add {
+  min-width: 38px;
+  height: 25px;
+  min-height: 25px;
+  padding: 3px 7px;
+  font-size: 10px;
+}

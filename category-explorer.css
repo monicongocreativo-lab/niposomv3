@@ -1,0 +1,43 @@
+.header-v3 .mobile-menu .mobile-category > summary::after,
+.header-v3 .mobile-menu .mobile-family > summary::after {
+ content:''; display:block; width:6px; height:6px; border-right:1px solid currentColor; border-bottom:1px solid currentColor; transform:rotate(45deg); margin-left:auto; flex-shrink:0;
+}
+.header-v3 .mobile-menu details[open] > summary::after { transform:rotate(225deg); }
+.category-explorer[hidden] { display:none; }
+.explore-trigger { border:0; cursor:pointer; }
+@media(min-width:1041px) {
+ html { scroll-padding-top:184px; }
+ .header-v3 .site-header::after { display:none; }
+ .header-v3 .site-header > [data-category-nav] { display:none; }
+ .header-v3 .site-header > .corporate-nav { position:relative; inset:auto; max-height:none; opacity:1; visibility:visible; pointer-events:auto; transform:none; background:#090f1a; }
+ .header-v3 .corporate-nav > .category-inner { background:transparent; max-width:1112px; justify-content:space-between; gap:16px; min-height:54px; }
+ .header-v3 .corporate-nav .category-inner > a,.header-v3 .corporate-nav .nav-item > button { color:white; font-size:15px; min-height:54px; padding-inline:10px; }
+ .header-v3 .corporate-nav .category-inner > a:last-child { color:#ff1734; }
+ .header-v3 .corporate-nav .explore-trigger { background:#e50015; color:white; border-radius:12px; padding:9px 12px; font-family:inherit; font-weight:600; font-size:15px; white-space:nowrap; }
+ .explore-trigger > span { font-size:23px; vertical-align:middle; line-height:18px; }
+ .category-explorer { position:absolute; top:100%; left:50%; transform:translateX(-50%); width:min(1112px,calc(100vw - 48px)); display:grid; grid-template-columns:29% 31% 40%; background:#fff; color:#182638; border:1px solid #dfe4eb; border-radius:0 0 16px 16px; box-shadow:0 15px 30px #00102626; padding:20px 12px; z-index:110; max-height:calc(100dvh - 190px); overflow:auto; }
+ .category-explorer section { padding:0 20px; min-width:0; }
+ .category-explorer section + section { border-left:1px solid #e6e9ee; }
+ .category-explorer h2 { font-size:18px; margin:0 0 16px; padding-bottom:12px; position:relative; }
+ .category-explorer h2::after { content:''; position:absolute; bottom:0; left:0; width:40px; height:2px; background:#e50015; }
+ .explore-categories button { display:flex; align-items:center; gap:14px; width:100%; border:0; background:transparent; color:#182638; padding:9px 10px; border-radius:5px; text-align:left; font-size:13px; font-weight:600; cursor:pointer; }
+ .explore-categories button > span:first-child { width:22px; font-size:21px; text-align:center; }
+ .explore-categories button::after { content:'›'; margin-left:auto; font-size:23px; }
+ .explore-categories button[aria-pressed=true] { background:#e50015; color:white; }
+ .explore-families summary { padding:9px 0; cursor:pointer; font-size:13px; }
+ .explore-families details a { display:block; padding:7px 12px; font-size:12px; color:#4b5f78; }
+ .explore-families a:hover { background:#edf2f7; }
+ .explore-features button { display:flex; align-items:center; text-align:left; gap:18px; padding:18px 14px; background:#f7f8fa; border:1px solid #dfe4eb; border-radius:9px; width:100%; margin-bottom:10px; color:#182638; cursor:pointer; font-size:14px; font-weight:600; }
+ .feature-icon { font-size:36px; color:#45617b; }
+ .explore-features small { display:block; font-weight:400; font-size:12px; margin-top:8px; color:#607187; }
+ .category-explorer button:focus-visible, .category-explorer summary:focus-visible { outline:2px solid #1f5fae; outline-offset:2px; }
+}
+@media(max-width:1040px) { .category-explorer,.explore-trigger { display:none; } }
+
+.header-v3 .corporate-nav.is-exploring .mega-menu { display:none !important; }
+@media(min-width:1041px) { .header-v3 .corporate-nav .explore-trigger { align-self:center; min-height:36px; height:36px; padding-block:6px; } }
+
+.header-v3 .corporate-nav .explore-trigger { display:inline-flex; align-items:center; gap:7px; }
+.explore-trigger > .explore-grid-icon { display:grid; grid-template-columns:repeat(3,5px); grid-template-rows:repeat(3,5px); gap:2px; flex:none; }
+.explore-grid-icon i { display:block; width:5px; height:5px; background:currentColor; }
+.explore-families details a.explore-view-all { color:#1f5fae; font-weight:600; border-bottom:1px solid #e6e9ee; margin-bottom:5px; }
